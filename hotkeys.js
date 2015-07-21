@@ -1,3 +1,5 @@
+(function ($) {
+
     $.extend($.fn, {
         bindKey: function (hotkey, handler) {
             hotkey = hotkey.toLowerCase();
@@ -44,7 +46,7 @@
 				    charCode=188;
 				    break;
                 default:
-                    charCode = key.charCodeAt(1) - 97 + 65;
+                    charCode = key.charCodeAt(0) - 97 + 65;
                     break;
             }
 
@@ -71,3 +73,5 @@
             });
         }
     });
+    
+})(jQuery);
